@@ -1,4 +1,4 @@
-      window.addEventListener("load", function () {
+     window.addEventListener("load", function () {
         if (!sessionStorage.getItem("splash")) {
             waiting()
             setTimeout(() => {
@@ -183,12 +183,19 @@
                             $('#nav-btn').addClass('d-none')
                             $('#nav-btn2').removeClass('d-none')
                             $('#nav-btn-c').addClass('d-none')
+                            $('#addbtn').hide()
+                $('#sendbtn').hide()
+                $('#commandbtn').hide()
+                $('#announcebtn').hide()
+                $('#recordbtn').show() //ปุ่มเมนูบันทึกข้อความ
+                name = rowindex[0][1]
                             // waiting()
                             //<-- -----------------------------กรณีที่ลงชื่อเข้าใช้เป็น User -->
                             google.script.run.withSuccessHandler((result) => {
                                 dataSend = result
                                 showUserTable({ name: rowindex[0][1], admin: false })
-                                console.log('data ' + rowindex[0][1])
+                                console.log('name คือ ' + rowindex[0][1])
+                
                             }).searchDataSend(name)
                         }
                     } else {
