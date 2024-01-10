@@ -285,6 +285,7 @@
     function addform2() {
         event.preventDefault();
         setForm('send', 'ฟอร์มหนังสือส่ง')
+         toggleFormInput(false)
         $('#closeModal1').click()
         $('#modal_form1').modal('show')
     }
