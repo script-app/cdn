@@ -11,7 +11,7 @@
 
     waiting()
     function waiting() {
-        Swal.fire({ title: 'กำลังโหลดข้อมูล..' });
+        Swal.fire({ title: 'กำลังโหลดข้อมูล..!!' });
         Swal.showLoading();
         setTimeout(() => {
             Swal.close();
