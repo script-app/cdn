@@ -15,40 +15,6 @@
             sessionStorage.setItem("splash", "true");
         }
      });
-    function login(obj) {
-      
-        Swal.fire({
-           title: 'รอสักครู่' 
-           })
-        Swal.showLoading()
-        
-        event.preventDefault()
-        //let username = obj.username.value
-        let password = obj.password.value
-        if (password == '<?=setting[7]?>') {
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "รหัสผ่านถูกต้อง",
-                showConfirmButton: false,
-                timer: 1500
-            });
-            // $('#Login').modal('hide');
-            $('#wrapper').show()
-            $('#login-page').hide();
-            sessionStorage.setItem("log", "true");
-
-        } else {
-            Swal.fire({
-                position: "center",
-                icon: "error",
-                title: "รหัสผ่าน ไม่ถูกต้อง!!",
-                showConfirmButton: false,
-                timer: 1500
-            });
-        }
-        document.getElementById('formLogin').reset()
-    }
 
     window.addEventListener("load", function () {
         if (!sessionStorage.getItem("log")) {
@@ -674,13 +640,6 @@
             Swal.fire('กรุณาเข้าระบบ')
         }
     }
-
-//<-- ---------------------------------------ตั้งค่าระบบ-->
-    function webGoogleSite() {
-      window.open('<?=setting[8]?>', '_blank')
-    }
-
-
 
 //<-- ---------------------------------------อัปเดตตาราง-->
     function updateTable(table, data) {
