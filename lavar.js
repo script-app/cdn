@@ -600,9 +600,9 @@ var rowdataRecord
             obj.user = user // ส่งตัวแปร user ไปกับ hidden input เพื่อไปบันทึกลงในคอลัมน์
             google.script.run.withSuccessHandler((outputx) => {
                 updateTable('#datatablerecord', outputx)
-                  setTimeout(() => {
-                    reLoad()
-                }, 200)
+google.script.run.withSuccessHandler(function (url) {
+        scripturl = url
+    }).getURL();
             }).saveBookRecord(obj)
 
     }
