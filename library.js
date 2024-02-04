@@ -600,7 +600,7 @@ var rowdataRecord
             obj.user = user // ส่งตัวแปร user ไปกับ hidden input เพื่อไปบันทึกลงในคอลัมน์
             google.script.run.withSuccessHandler((outputx) => {
                 updateTable('#datatablerecord', outputx)
-
+                reLoad()
             }).saveBookRecord(obj)
 
     }
