@@ -599,8 +599,10 @@ var rowdataRecord
             Swal.showLoading();
             obj.user = user // ส่งตัวแปร user ไปกับ hidden input เพื่อไปบันทึกลงในคอลัมน์
             google.script.run.withSuccessHandler((outputx) => {
-                //updateTable('#datatablerecord', outputx)
-                 waiting()
+                updateTable('#datatablerecord', outputx)
+                  setTimeout(() => {
+                    reload()
+                }, 200)
             }).saveBookRecord(obj)
 
     }
